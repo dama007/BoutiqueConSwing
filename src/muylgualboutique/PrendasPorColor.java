@@ -8,23 +8,26 @@ package muylgualboutique;
 public class PrendasPorColor extends javax.swing.JDialog {
     
     
-    private ListaPrendas p_color;
+    private ListaPrendas pColor;
 
-    public ListaPrendas getP_color() {
-        return p_color;
+    
+    
+    
+    public ListaPrendas getPColor() {
+        return pColor;
     }
 
-    public void setP_color(ListaPrendas p_color) {
-        this.p_color = p_color;
+    public void setPColor(ListaPrendas pColor) {
+        this.pColor = pColor;
     }
 
 
     
     public PrendasPorColor(java.awt.Frame parent, boolean modal, String colores) {
         super(parent, modal);
-        p_color = MuylgualBoutique.misPrendas.prendasPorColor(colores);
+        pColor = MuylgualBoutique.misPrendas.prendasPorColor(colores);
         initComponents();
-        this.setTitle("Profesores de " + colores);
+        this.setTitle("Prendas de color " + colores);
     }
 
     
@@ -38,6 +41,7 @@ public class PrendasPorColor extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Prendas por color");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,7 +55,7 @@ public class PrendasPorColor extends javax.swing.JDialog {
             }
         ));
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${P_color.lista}");
+        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${PColor.lista}");
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jTable1);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${codigo}"));
         columnBinding.setColumnName("Codigo");
@@ -62,6 +66,15 @@ public class PrendasPorColor extends javax.swing.JDialog {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${color}"));
         columnBinding.setColumnName("Color");
         columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${talla}"));
+        columnBinding.setColumnName("Talla");
+        columnBinding.setColumnClass(String.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${coste}"));
+        columnBinding.setColumnName("Coste");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${pvp}"));
+        columnBinding.setColumnName("Pvp");
+        columnBinding.setColumnClass(Double.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${stock}"));
         columnBinding.setColumnName("Stock");
         columnBinding.setColumnClass(Integer.class);

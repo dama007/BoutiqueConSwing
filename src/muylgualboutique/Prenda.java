@@ -15,7 +15,7 @@ public class Prenda implements Serializable {
     private double coste;    
     private String color;    
     private String talla;    
-    private double precio_venta;    
+    private double pvp;    
     private int stock;
 
     
@@ -33,19 +33,19 @@ public class Prenda implements Serializable {
 
           
     
-    public Prenda(String codigo, String descripcion, double coste, String color, String talla, double precio_venta, int stock) {
+    public Prenda(String codigo, String descripcion, double coste, String color, String talla, double pvp, int stock) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.coste = coste;
         this.color = color;
         this.talla = talla;
-        this.precio_venta = precio_venta;
+        this.pvp = pvp;
         this.stock = stock;
     }
 
     @Override
     public String toString() {
-        return codigo + " - " + descripcion;
+        return codigo + " - " + descripcion + "," + talla + " - " + stock;
     }
     
     
@@ -85,12 +85,12 @@ public class Prenda implements Serializable {
     }
 
 
-    public double getPrecio_venta() {
-        return precio_venta;
+    public double getPvp() {
+        return pvp;
     }
 
-    public void setPrecio_venta(double precio_venta) {
-        this.precio_venta = precio_venta;
+    public void setPvp(double pvp) {
+        this.pvp = pvp;
     }
 
 

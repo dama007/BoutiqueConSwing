@@ -81,7 +81,7 @@
               <Subbinding sourcePath="${coste}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${precio_venta}">
+              <Subbinding sourcePath="${pvp}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
               </Subbinding>
               <Subbinding sourcePath="${stock}">
