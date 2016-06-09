@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_80" class="java.beans.XMLDecoder">
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
  <object class="muylgualboutique.ListaPrendas" id="ListaPrendas0">
   <void property="lista">
    <void method="add">
@@ -84,28 +84,6 @@
    <void method="add">
     <object class="muylgualboutique.Prenda">
      <void property="codigo">
-      <string>gh85</string>
-     </void>
-     <void property="color">
-      <string>rojo</string>
-     </void>
-     <void property="coste">
-      <double>23.45</double>
-     </void>
-     <void property="descripcion">
-      <string>Camisa Lady Gaga</string>
-     </void>
-     <void property="stock">
-      <int>125</int>
-     </void>
-     <void property="talla">
-      <string>S</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="muylgualboutique.Prenda">
-     <void property="codigo">
       <string>pj65</string>
      </void>
      <void property="color">
@@ -150,6 +128,31 @@
      </void>
      <void property="talla">
       <string>XL</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>58mj</string>
+     </void>
+     <void property="color">
+      <string>negro</string>
+     </void>
+     <void property="coste">
+      <double>35.0</double>
+     </void>
+     <void property="descripcion">
+      <string>Gorra Michael Jackson</string>
+     </void>
+     <void property="pvp">
+      <double>79.0</double>
+     </void>
+     <void property="stock">
+      <int>100</int>
+     </void>
+     <void property="talla">
+      <string>M</string>
      </void>
     </object>
    </void>
